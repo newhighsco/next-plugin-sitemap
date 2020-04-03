@@ -17,28 +17,19 @@ Create a `next.config.js` in your project:
 ```js
 // next.config.js
 const withSitemap = require('@newhighsco/next-plugin-sitemap')
-module.exports = withSitemap()
-```
-
-Optionally you can add your custom Next.js configuration as a parameter:
-
-```js
-// next.config.js
-const withSitemap = require('@newhighsco/next-plugin-sitemap')
-
-const nextConfig = {
-  ...
-}
-
-module.exports = withSitemap(nextConfig)
+module.exports = withSitemap({
+  sitemap: {
+    /* config options here */
+  }
+})
 ```
 
 ## Options
 
-### filename
-
-### hostname
-
-### ignore
+|Name|Type|Default|
+|-|-|-|
+|`hostname*`|`string`|-|
+|`ignorePaths?`|`array`|`['/404', '/']`|
+|`filename?`|`string`|`sitemap.xml`|
 
 ## [CHANGELOG](CHANGELOG.md)

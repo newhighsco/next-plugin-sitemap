@@ -23,7 +23,7 @@
     "format:js": "npm run lint:js -- --fix"
   },
   "dependencies": {
-    "sitemap": "6.1.1"
+    "sitemap": "6.1.2"
   },
   "devDependencies": {
     "@babel/core": "7.9.0",

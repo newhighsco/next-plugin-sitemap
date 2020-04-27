@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/newhighsco/next-plugin-sitemap/compare/v1.0.2...v1.0.3) (2020-04-27)
+
+
+### Bug Fixes
+
+* normalizes hostname ([d96065c](https://github.com/newhighsco/next-plugin-sitemap/commit/d96065cbc565b16bd9c4ae6ce4293d0c575169c5))
+
 ## [1.0.2](https://github.com/newhighsco/next-plugin-sitemap/compare/v1.0.1...v1.0.2) (2020-04-25)
 
 

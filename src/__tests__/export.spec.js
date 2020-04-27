@@ -13,7 +13,7 @@ const options = {
 }
 const sitemap = {
   filename: 'sitemap.xml',
-  hostname: 'https://test.com/'
+  hostname: 'test.com/'
 }
 
 describe('exportSitemap', () => {
@@ -60,7 +60,7 @@ describe('exportSitemap', () => {
 
     expect(pathMap).toEqual({ fizz: {}, buzz: {} })
     expect(createWriteStream).toBeCalledWith('out/sitemap.xml')
-    expect(SitemapStream).toBeCalledWith({ hostname: 'https://test.com/' })
+    expect(SitemapStream).toBeCalledWith({ hostname: 'http://test.com' })
     expect(SitemapStream.mock.instances[0].write).toBeCalledTimes(2)
     expect(SitemapStream.mock.instances[0].write.mock.calls[0]).toEqual([
       { url: 'foo' }

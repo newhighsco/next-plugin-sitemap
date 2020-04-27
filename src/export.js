@@ -1,6 +1,7 @@
 const { createWriteStream } = require('fs')
 const { SitemapStream } = require('sitemap')
 const { join } = require('path')
+const normalizeUrl = require('normalize-url')
 
 module.exports = (nextConfig = {}) => async (...args) => {
   const { sitemap = {} } = nextConfig
@@ -16,7 +17,7 @@ module.exports = (nextConfig = {}) => async (...args) => {
 
     if (paths.length) {
       const sitemap = new SitemapStream({
-        hostname
+        hostname: normalizeUrl(hostname)
       })
       const writeStream = createWriteStream(join(outDir, filename))
 

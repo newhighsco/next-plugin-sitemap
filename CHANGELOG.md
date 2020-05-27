@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/newhighsco/next-plugin-sitemap/compare/v1.0.5...v1.0.6) (2020-05-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency sitemap to v6.1.5 ([5c090a2](https://github.com/newhighsco/next-plugin-sitemap/commit/5c090a29a4becb547887f9f13832c23ea2678367))
+
 ## [1.0.5](https://github.com/newhighsco/next-plugin-sitemap/compare/v1.0.4...v1.0.5) (2020-05-13)
 
 

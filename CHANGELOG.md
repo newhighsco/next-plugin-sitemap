@@ -1,3 +1,10 @@
+## [1.0.10](https://github.com/newhighsco/next-plugin-sitemap/compare/v1.0.9...v1.0.10) (2020-07-29)
+
+
+### Bug Fixes
+
+* bump version when Next updates ([fcb0b08](https://github.com/newhighsco/next-plugin-sitemap/commit/fcb0b0854e58d2da67e522da2dfd18e5abf0411d))
+
 ## [1.0.9](https://github.com/newhighsco/next-plugin-sitemap/compare/v1.0.8...v1.0.9) (2020-07-06)
 
 

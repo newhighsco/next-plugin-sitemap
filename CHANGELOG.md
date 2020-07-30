@@ -1,3 +1,10 @@
+## [1.0.11](https://github.com/newhighsco/next-plugin-sitemap/compare/v1.0.10...v1.0.11) (2020-07-30)
+
+
+### Bug Fixes
+
+* **deps:** update dependency next to v9.5.1 ([460ba53](https://github.com/newhighsco/next-plugin-sitemap/commit/460ba5361f394d9ba252bfad21259c6aa5ebe796))
+
 ## [1.0.10](https://github.com/newhighsco/next-plugin-sitemap/compare/v1.0.9...v1.0.10) (2020-07-29)
 
 

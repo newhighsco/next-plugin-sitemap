@@ -1,3 +1,10 @@
+## [1.0.14](https://github.com/newhighsco/next-plugin-sitemap/compare/v1.0.13...v1.0.14) (2020-08-13)
+
+
+### Bug Fixes
+
+* await custom exportPathMap ([35eeb0d](https://github.com/newhighsco/next-plugin-sitemap/commit/35eeb0d66098700584220326830a05afd5e22ccc))
+
 ## [1.0.13](https://github.com/newhighsco/next-plugin-sitemap/compare/v1.0.12...v1.0.13) (2020-08-13)
 
 

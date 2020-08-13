@@ -1,3 +1,10 @@
+## [1.0.13](https://github.com/newhighsco/next-plugin-sitemap/compare/v1.0.12...v1.0.13) (2020-08-13)
+
+
+### Bug Fixes
+
+* use existing exportPathMap to determine links to create ([d4064f4](https://github.com/newhighsco/next-plugin-sitemap/commit/d4064f4856d80700397b007ad62c9a71c1d33921))
+
 ## [1.0.12](https://github.com/newhighsco/next-plugin-sitemap/compare/v1.0.11...v1.0.12) (2020-08-11)
 
 

@@ -7,7 +7,7 @@ module.exports = (nextConfig = {}) => async (...args) => {
   const { sitemap = {} } = nextConfig
   const [defaultPathMap, { dev, outDir }] = args
   const customMapPath = nextConfig.exportPathMap
-    ? nextConfig.exportPathMap(...args)
+    ? await nextConfig.exportPathMap(...args)
     : defaultPathMap
 
   if (!dev && sitemap && sitemap.hostname) {

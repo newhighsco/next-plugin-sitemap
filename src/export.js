@@ -6,10 +6,13 @@ const normalizeUrl = require('normalize-url')
 module.exports = (nextConfig = {}) => async (...args) => {
   const { sitemap = {} } = nextConfig
   const [defaultPathMap, { dev, outDir }] = args
+  const customMapPath = nextConfig.exportPathMap
+    ? nextConfig.exportPathMap(...args)
+    : defaultPathMap
 
   if (!dev && sitemap && sitemap.hostname) {
     const { filename, hostname, ignorePaths = [] } = sitemap
-    const pathMap = Object.assign({}, defaultPathMap)
+    const pathMap = Object.assign({}, customMapPath)
 
     ignorePaths.map(path => delete pathMap[path])
 
@@ -29,9 +32,7 @@ module.exports = (nextConfig = {}) => async (...args) => {
     }
   }
 
-  if (typeof nextConfig.exportPathMap === 'function') {
-    return nextConfig.exportPathMap(...args)
-  }
-
-  return defaultPathMap
+  return nextConfig.exportPathMap
+    ? nextConfig.exportPathMap(...args)
+    : defaultPathMap
 }

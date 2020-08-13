@@ -6,7 +6,7 @@ jest.mock('fs')
 jest.mock('sitemap')
 
 const defaultPathMap = { foo: {}, bar: {} }
-const exportPathMap = jest.fn(() => ({ fizz: {}, buzz: {} }))
+const exportPathMap = jest.fn(() => ({ fizz: {}, buzz: {}, foo: {}, bar: {} }))
 const options = {
   dev: true,
   outDir: 'out'
@@ -58,14 +58,20 @@ describe('exportSitemap', () => {
       dev: false
     })
 
-    expect(pathMap).toEqual({ fizz: {}, buzz: {} })
+    expect(pathMap).toEqual({ fizz: {}, buzz: {}, foo: {}, bar: {} })
     expect(createWriteStream).toBeCalledWith('out/sitemap.xml')
     expect(SitemapStream).toBeCalledWith({ hostname: 'http://test.com' })
-    expect(SitemapStream.mock.instances[0].write).toBeCalledTimes(2)
+    expect(SitemapStream.mock.instances[0].write).toBeCalledTimes(4)
     expect(SitemapStream.mock.instances[0].write.mock.calls[0]).toEqual([
-      { url: 'foo' }
+      { url: 'fizz' }
     ])
     expect(SitemapStream.mock.instances[0].write.mock.calls[1]).toEqual([
+      { url: 'buzz' }
+    ])
+    expect(SitemapStream.mock.instances[0].write.mock.calls[2]).toEqual([
+      { url: 'foo' }
+    ])
+    expect(SitemapStream.mock.instances[0].write.mock.calls[3]).toEqual([
       { url: 'bar' }
     ])
     expect(nextConfig.exportPathMap).toBeCalledWith(defaultPathMap, {

@@ -1,3 +1,5 @@
+> **DEPRECATED: No longer supported. Please use [next-sitemap](https://github.com/iamvishnusankar/next-sitemap) instead.**
+
 # next-plugin-sitemap [![NPM version](https://img.shields.io/npm/v/@newhighsco/next-plugin-sitemap.svg)](https://www.npmjs.com/package/@newhighsco/next-plugin-sitemap)
 
 [Next.js](https://nextjs.org/) plugin for generating an XML sitemap during `next export`
